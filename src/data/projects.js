@@ -6,7 +6,34 @@ import campusvoteHome from "../assets/projects/campusvote/home.png"
 import campusvoteDashboard from "../assets/projects/campusvote/dashboard.png"
 import campusvoteResults from "../assets/projects/campusvote/results.png"
 
+import synthforgeHome from "../assets/projects/synthforge/home.png"
+import synthforgePrivacyThreat from "../assets/projects/synthforge/privacy-threat.png"
+import synthforgeSynthesize from "../assets/projects/synthforge/synthesize.png"
+import synthforgeQualityReport from "../assets/projects/synthforge/quality-report.png"
+
 export const projects = [
+  {
+    id: "synthforge",
+    title: "SynthForge",
+    isFeatured: true,
+    shortDescription: "Privacy-preserving synthetic data platform for generating, validating, and stress-testing synthetic tabular datasets.",
+    fullDescription: "SynthForge is a modern platform for generating, validating, and stress-testing privacy-preserving synthetic tabular datasets. It combines statistical copula modeling and deep generative neural networks (TVAE/CTGAN) with mathematical Differential Privacy, an automated 5-pillar Quality & Trustworthiness audit, and empirical adversarial privacy threat simulations.",
+    problem: "Real-world datasets in domains such as healthcare, finance, e-commerce, and logistics often contain sensitive or regulated information that cannot be freely shared. Synthetic data can provide a practical alternative, but generated data must be independently evaluated for both data fidelity and privacy protection rather than being assumed to be useful or private.",
+    solution: "SynthForge provides an end-to-end workflow for generating synthetic tabular data and evaluating it across statistical fidelity, relationships, machine-learning utility, structural integrity, and privacy protection. It also performs empirical privacy threat simulations to identify potential re-identification, membership inference, attribute inference, and exact-record collision risks.",
+    features: [
+      "Privacy-Preserving Synthetic Data Generation",
+      "Statistical Copula Modeling",
+      "TVAE & CTGAN Generative Models",
+      "Differential Privacy Protection",
+      "5-Pillar Quality & Trustworthiness Audit",
+      "Empirical Privacy Attack Simulation"
+    ],
+    technologies: ["Python", "FastAPI", "JavaScript", "Differential Privacy", "TVAE", "CTGAN", "Gaussian Copula", "Statistical Validation", "Machine Learning / TSTR", "Chart.js"],
+    githubUrl: "https://github.com/jeevan-m-21/SynthForge",
+    demoUrl: "",
+    preview: synthforgeHome,
+    images: [synthforgeHome, synthforgeSynthesize,synthforgeQualityReport, synthforgePrivacyThreat]
+  },
   {
     id: "campushive",
     title: "CampusHive",
