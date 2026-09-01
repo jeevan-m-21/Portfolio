@@ -189,15 +189,17 @@ const ProjectDetails = () => {
               </section>
             )}
 
-            {/* Empty Screenshots fallback (CampusHive) */}
+            {/* Empty Screenshots fallback */}
             {(!project.images || project.images.length === 0) && (
               <section className="bg-gradient-to-tr from-violet-600/5 to-cyan-500/5 border border-violet-500/10 dark:border-violet-400/10 p-8 rounded-2xl shadow-inner relative overflow-hidden">
                 <div className="absolute -right-20 -bottom-20 w-60 h-60 bg-gradient-to-tr from-violet-600 to-cyan-500 rounded-full blur-[90px] opacity-10 pointer-events-none" />
                 <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-3 flex items-center gap-2">
-                  🚀 Development Roadmap & Architecture
+                  {project.id === "synthforge" ? "🔐 Privacy & Quality Audit" : "🚀 Development Roadmap & Architecture"}
                 </h3>
                 <p className="text-base text-slate-600 dark:text-slate-400 leading-relaxed font-medium">
-                  CampusHive is currently under active architecture design and early implementation phases. Cryptographic authentication schemes and system mockups are being mapped. While direct screenshots are not yet available, the full system deployment plan is targeted for completion in the next development cycle.
+                  {project.id === "synthforge"
+                    ? "SynthForge focuses on synthesizing privacy-preserving tabular data and validating it across fidelity, utility, and adversarial privacy risk. This workflow combines statistical modeling, generative AI techniques, rigorous quality assessment, and empirical threat simulation to support trustworthiness and responsible data sharing."
+                    : "CampusHive is currently under active architecture design and early implementation phases. Cryptographic authentication schemes and system mockups are being mapped. While direct screenshots are not yet available, the full system deployment plan is targeted for completion in the next development cycle."}
                 </p>
               </section>
             )}
